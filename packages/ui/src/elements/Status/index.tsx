@@ -50,7 +50,9 @@ export const Status: React.FC = () => {
   const localeUnPublishModalSlug = `confirm-un-publish-locale-${id}`
   const revertModalSlug = `confirm-revert-${id}`
 
-  const [statusToRender, setStatusToRender] = React.useState<'changed' | 'draft' | 'published'>('draft')
+  const [statusToRender, setStatusToRender] = React.useState<'changed' | 'draft' | 'published'>(
+    'draft',
+  )
 
   const collectionConfig = getEntityConfig({ collectionSlug })
   const globalConfig = getEntityConfig({ globalSlug })
@@ -103,9 +105,11 @@ export const Status: React.FC = () => {
       }
 
       if (action === 'revert') {
-        const publishedDoc = await requests.get(publishedDocURL, {
-          headers,
-        }).then((res) => res.json())
+        const publishedDoc = await requests
+          .get(publishedDocURL, {
+            headers,
+          })
+          .then((res) => res.json())
 
         body = publishedDoc._status === 'published' ? publishedDoc : undefined
         if (!body) {
@@ -128,7 +132,6 @@ export const Status: React.FC = () => {
         toast.success(json.message)
         setMostRecentVersionIsAutosaved(false)
         if (action === 'unpublish') {
-          setHasPublishedDoc(false)
           setStatusToRender('draft')
         } else if (action === 'revert') {
           setHasPublishedDoc(true)
@@ -150,7 +153,21 @@ export const Status: React.FC = () => {
         }
       }
     },
-    [api, collectionSlug, globalSlug, id, locale, serverURL, i18n.language, resetForm, incrementVersionCount, setUnpublishedVersionCount, setMostRecentVersionIsAutosaved, t, setHasPublishedDoc],
+    [
+      api,
+      collectionSlug,
+      globalSlug,
+      id,
+      locale,
+      serverURL,
+      i18n.language,
+      resetForm,
+      incrementVersionCount,
+      setUnpublishedVersionCount,
+      setMostRecentVersionIsAutosaved,
+      t,
+      setHasPublishedDoc,
+    ],
   )
 
   const canUpdate = docPermissions?.update
@@ -182,7 +199,7 @@ export const Status: React.FC = () => {
                 modalSlug={unPublishModalSlug}
                 onConfirm={() => performAction('unpublish')}
               />
-              {enableUnpublishSpecificLocale &&
+              {enableUnpublishSpecificLocale && (
                 // TODO: update when we get UI design
                 <>
                   &nbsp;&mdash;&nbsp;
@@ -202,7 +219,7 @@ export const Status: React.FC = () => {
                     onConfirm={() => performAction('unpublish', true)}
                   />
                 </>
-              }
+              )}
             </React.Fragment>
           )}
           {!isTrashed && canUpdate && statusToRender === 'changed' && (

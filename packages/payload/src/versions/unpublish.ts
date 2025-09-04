@@ -23,7 +23,7 @@ export const unpublish = async ({
 }: Args): Promise<null | TypeWithID> => {
   const now = new Date().toISOString()
   const findVersionArgs = {
-    limit: 1,
+    limit: 2,
     pagination: false,
     req,
     sort: '-updatedAt',
@@ -59,6 +59,7 @@ export const unpublish = async ({
     }
 
     const latestVersion = docs[0]
+    const previousPublish = docs[1]
     if (!latestVersion) {
       return null
     }
@@ -96,62 +97,56 @@ export const unpublish = async ({
     }
 
     let result
-
-    if (collection) {
-      // update main doc to draft
+    const updateData = previousPublish ? previousPublish.version : { _status: 'draft' }
+    if (collection && id !== undefined) {
+      // update main doc to previous published if available
+      // otherwise set to draft
       await payload.db.updateOne({
         collection: collection.slug,
-        data: {
-          _status: 'draft',
-        },
+        data: updateData,
         locale: locale || undefined,
         req,
         where: { id: { equals: id } },
       })
 
       // update version to draft
-      result = await payload.db.updateVersion({
+      await payload.db.updateVersion({
         ...updateVersionArgs,
         collection: collection.slug,
       })
 
-      result = sanitizeInternalFields((result as any).version)
-
       // fetch updated main doc in requested locale
-      if (locale && id !== undefined) {
-        result = await payload.findByID({
-          id,
-          collection: collection.slug,
-          locale,
-          req,
-        })
-      }
+      result = await payload.findByID({
+        id,
+        collection: collection.slug,
+        draft: true,
+        locale,
+        req,
+      })
     }
 
     if (global) {
-      // update main doc to draft
+      // update main doc to previous published if available
+      // otherwise set to draft
       await payload.db.updateGlobal({
         slug: global.slug,
-        data: { _status: 'draft' },
+        data: updateData,
         req,
       })
 
       // update version to draft
-      result = await payload.db.updateGlobalVersion({
+      await payload.db.updateGlobalVersion({
         ...updateVersionArgs,
         global: global.slug,
       })
 
-      result = sanitizeInternalFields((result as any).version)
-
       // fetch updated main doc in requested locale
-      if (locale) {
-        result = await payload.findGlobal({
-          slug: global.slug,
-          locale,
-          req,
-        })
-      }
+      result = await payload.findGlobal({
+        slug: global.slug,
+        draft: true,
+        locale,
+        req,
+      })
     }
 
     return result as TypeWithID
