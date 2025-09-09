@@ -608,6 +608,7 @@ export const roTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Dezpublicare',
     unpublishedSuccessfully: 'Nepublicat cu succes.',
+    unpublishIn: 'Anulați publicarea în {{locale}}',
     unpublishing: 'Dezpublicare...',
     version: 'Versiune',
     versionAgo: '{{distance}} în urmă',

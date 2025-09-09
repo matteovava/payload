@@ -602,6 +602,7 @@ export const azTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Dərcdən çıxart',
     unpublishedSuccessfully: 'Uğurla dərc olunmadı.',
+    unpublishIn: '{{locale}} dilində yayından çıxarın',
     unpublishing: 'Dərcdən çıxarılır...',
     version: 'Versiya',
     versionAgo: '{{distance}} əvvəl',

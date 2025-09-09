@@ -605,6 +605,7 @@ export const huTranslations: DefaultTranslationsObject = {
     status: 'Állapot',
     unpublish: 'Közzététel visszavonása',
     unpublishedSuccessfully: 'Sikeresen törölve a közzétételről.',
+    unpublishIn: 'Ne tessék közzétenni a {{locale}} helyen',
     unpublishing: 'Közzététel visszavonása...',
     version: 'Verzió',
     versionAgo: '{{distance}} ezelőtt',

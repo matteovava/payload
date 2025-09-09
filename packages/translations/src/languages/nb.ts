@@ -599,6 +599,7 @@ export const nbTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Avpubliser',
     unpublishedSuccessfully: 'Avpublisert med suksess.',
+    unpublishIn: 'Avpubliser i {{locale}}',
     unpublishing: 'Avpubliserer...',
     version: 'Versjon',
     versionAgo: '{{distance}} siden',

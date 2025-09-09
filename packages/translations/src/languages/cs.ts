@@ -596,6 +596,7 @@ export const csTranslations: DefaultTranslationsObject = {
     status: 'Stav',
     unpublish: 'Zrušit publikování',
     unpublishedSuccessfully: 'Úspěšně nezveřejněno.',
+    unpublishIn: 'Zrušit publikování v {{locale}}',
     unpublishing: 'Zrušuji publikování...',
     version: 'Verze',
     versionAgo: 'před {{distance}}',

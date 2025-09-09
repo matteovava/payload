@@ -601,6 +601,7 @@ export const enTranslations = {
     status: 'Status',
     unpublish: 'Unpublish',
     unpublishedSuccessfully: 'Unpublished successfully.',
+    unpublishIn: 'Unpublish in {{locale}}',
     unpublishing: 'Unpublishing...',
     version: 'Version',
     versionAgo: '{{distance}} ago',

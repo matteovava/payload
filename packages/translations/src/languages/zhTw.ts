@@ -569,6 +569,7 @@ export const zhTwTranslations: DefaultTranslationsObject = {
     status: '狀態',
     unpublish: '取消發佈',
     unpublishedSuccessfully: '成功取消發布。',
+    unpublishIn: '在 {{locale}} 中取消發布',
     unpublishing: '取消發佈中…',
     version: '版本',
     versionAgo: '{{distance}} 前',

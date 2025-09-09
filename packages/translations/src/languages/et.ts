@@ -590,6 +590,7 @@ export const etTranslations: DefaultTranslationsObject = {
     status: 'Olek',
     unpublish: 'Tühista avaldamine',
     unpublishedSuccessfully: 'Edastamata edukalt.',
+    unpublishIn: 'Tühista avaldamine asukohas {{locale}}',
     unpublishing: 'Avaldamise tühistamine...',
     version: 'Versioon',
     versionAgo: '{{distance}} tagasi',

@@ -597,6 +597,7 @@ export const plTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Cofnij publikację',
     unpublishedSuccessfully: 'Nieopublikowano pomyślnie.',
+    unpublishIn: 'Cofnij publikację w {{locale}}',
     unpublishing: 'Cofanie publikacji...',
     version: 'Wersja',
     versionAgo: '{{distance}} temu',

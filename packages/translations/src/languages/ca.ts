@@ -602,6 +602,7 @@ export const caTranslations: DefaultTranslationsObject = {
     status: 'Estat',
     unpublish: 'Despublicar',
     unpublishedSuccessfully: 'Publicació desfeta correctament.',
+    unpublishIn: 'Despublica en {{locale}}',
     unpublishing: 'Despublicant...',
     version: 'Versió',
     versionAgo: 'fa {{distance}}',

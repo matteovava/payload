@@ -597,6 +597,7 @@ export const isTranslations: DefaultTranslationsObject = {
     status: 'Staða',
     unpublish: 'Fela',
     unpublishedSuccessfully: 'Óbirtist heppilega.',
+    unpublishIn: 'Afbóka í {{locale}}',
     unpublishing: 'Fel...',
     version: 'Útgáfa',
     versionAgo: '{{distance}} síðan',

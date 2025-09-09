@@ -601,6 +601,7 @@ export const idTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Batalkan Publikasi',
     unpublishedSuccessfully: 'Berhasil tidak dipublikasikan.',
+    unpublishIn: 'Batalkan penerbitan dalam {{locale}}',
     unpublishing: 'Membatalkan publikasi...',
     version: 'Versi',
     versionAgo: '{{distance}} yang lalu',

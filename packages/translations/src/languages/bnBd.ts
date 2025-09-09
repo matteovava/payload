@@ -604,6 +604,7 @@ export const bnBdTranslations: DefaultTranslationsObject = {
     status: 'স্থিতি',
     unpublish: 'প্রকাশ বাতিল করুন',
     unpublishedSuccessfully: 'সফলভাবে অপ্রকাশিত হয়েছে।',
+    unpublishIn: '{{locale}} এ অপ্রকাশিত করুন',
     unpublishing: 'প্রকাশ বাতিল করা হচ্ছে...',
     version: 'সংস্করণ',
     versionAgo: '{{distance}} পূর্বে',

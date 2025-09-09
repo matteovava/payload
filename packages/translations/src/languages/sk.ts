@@ -596,6 +596,7 @@ export const skTranslations: DefaultTranslationsObject = {
     status: 'Stav',
     unpublish: 'Zrušiť publikovanie',
     unpublishedSuccessfully: 'Úspešne nezverejnené.',
+    unpublishIn: 'Zrušiť publikovanie v {{locale}}',
     unpublishing: 'Zrušujem publikovanie...',
     version: 'Verzia',
     versionAgo: 'pred {{distance}}',

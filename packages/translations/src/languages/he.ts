@@ -579,6 +579,7 @@ export const heTranslations: DefaultTranslationsObject = {
     status: 'סטטוס',
     unpublish: 'בטל פרסום',
     unpublishedSuccessfully: 'לא פורסם בהצלחה.',
+    unpublishIn: 'בטל פרסום ב-{{locale}}',
     unpublishing: 'מבטל פרסום...',
     version: 'גרסה',
     versionAgo: 'לפני {{distance}}',

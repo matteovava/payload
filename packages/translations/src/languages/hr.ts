@@ -595,6 +595,7 @@ export const hrTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Poništi objavu',
     unpublishedSuccessfully: 'Uspješno nepobjavljeno.',
+    unpublishIn: 'Povuci objavljivanje u {{locale}}',
     unpublishing: 'Poništavanje objave...',
     version: 'Verzija',
     versionAgo: 'prije {{distance}}',

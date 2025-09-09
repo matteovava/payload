@@ -592,6 +592,7 @@ export const faTranslations: DefaultTranslationsObject = {
     status: 'وضعیت',
     unpublish: 'لغو انتشار',
     unpublishedSuccessfully: 'با موفقیت منتشر نشد.',
+    unpublishIn: 'لغو انتشار در {{locale}}',
     unpublishing: 'در حال لغو انتشار...',
     version: 'نگارش',
     versionAgo: '{{distance}} پیش',

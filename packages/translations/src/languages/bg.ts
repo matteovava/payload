@@ -598,6 +598,7 @@ export const bgTranslations: DefaultTranslationsObject = {
     status: 'Статус',
     unpublish: 'Скрий',
     unpublishedSuccessfully: 'Успешно оттеглено.',
+    unpublishIn: 'Отменяне на публикацията в {{locale}}',
     unpublishing: 'Скриване...',
     version: 'Версия',
     versionAgo: 'преди {{distance}}',

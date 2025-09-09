@@ -611,6 +611,7 @@ export const deTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Veröffentlichung aufheben',
     unpublishedSuccessfully: 'Erfolgreich unveröffentlicht.',
+    unpublishIn: 'Veröffentlichung aufheben in {{locale}}',
     unpublishing: 'Veröffentlichung aufheben...',
     version: 'Version',
     versionAgo: 'vor {{distance}}',

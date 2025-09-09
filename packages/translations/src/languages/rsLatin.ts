@@ -597,6 +597,7 @@ export const rsLatinTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Poništi objavu',
     unpublishedSuccessfully: 'Uspješno nije objavljeno.',
+    unpublishIn: 'Poništi objavljivanje na {{locale}}',
     unpublishing: 'Poništavanje objave...',
     version: 'Verzija',
     versionAgo: 'pre {{distance}}',

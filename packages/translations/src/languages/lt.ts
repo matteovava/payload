@@ -603,6 +603,7 @@ export const ltTranslations: DefaultTranslationsObject = {
     status: 'Būsena',
     unpublish: 'Nebepublikuoti',
     unpublishedSuccessfully: 'Sėkmingai nepublikuota.',
+    unpublishIn: 'Nepublikuoti {{locale}}',
     unpublishing: 'Nebepublikuojama...',
     version: 'Versija',
     versionAgo: 'prieš {{distance}}',

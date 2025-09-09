@@ -598,6 +598,7 @@ export const daTranslations: DefaultTranslationsObject = {
     status: 'Status',
     unpublish: 'Afpublicer',
     unpublishedSuccessfully: 'Offentliggørelse annulleret med succes.',
+    unpublishIn: 'Fjern offentliggørelse i {{locale}}',
     unpublishing: 'Afpublicerer...',
     version: 'Version',
     versionAgo: '{{distance}} siden',

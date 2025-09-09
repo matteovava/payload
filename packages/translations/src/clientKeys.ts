@@ -502,6 +502,7 @@ export const clientTranslationKeys = createClientTranslationKeys([
   'version:status',
   'version:type',
   'version:unpublish',
+  'version:unpublishIn',
   'version:unpublishing',
   'version:unpublishedSuccessfully',
   'version:versionID',

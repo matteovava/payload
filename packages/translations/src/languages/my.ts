@@ -608,6 +608,7 @@ export const myTranslations: DefaultTranslationsObject = {
     status: 'အခြေအနေ',
     unpublish: 'ပြန်ဖြုတ်မည်။',
     unpublishedSuccessfully: 'Berjaya tidak diterbitkan.',
+    unpublishIn: 'ဖျက်သိမ်းမည့် {{locale}}',
     unpublishing: 'ပြန်ဖြုတ်နေဆဲ ...',
     version: 'ဗားရှင်း',
     versionAgo: '{{distance}} ကြာပြီ',

@@ -601,6 +601,7 @@ export const ruTranslations: DefaultTranslationsObject = {
     status: 'Статус',
     unpublish: 'Отменить публикацию',
     unpublishedSuccessfully: 'Успешно снято с публикации.',
+    unpublishIn: 'Отменить публикацию на {{locale}}',
     unpublishing: 'Отмена публикации...',
     version: 'Версия',
     versionAgo: '{{distance}} назад',

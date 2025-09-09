@@ -605,6 +605,7 @@ export const itTranslations: DefaultTranslationsObject = {
     status: 'Stato',
     unpublish: 'Annulla pubblicazione',
     unpublishedSuccessfully: 'Pubblicazione disattivata con successo.',
+    unpublishIn: 'Non pubblicare in {{locale}}',
     unpublishing: 'Annullamento pubblicazione...',
     version: 'Versione',
     versionAgo: '{{distance}} fa',

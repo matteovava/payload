@@ -594,6 +594,7 @@ export const viTranslations: DefaultTranslationsObject = {
     status: 'Trạng thái',
     unpublish: 'Ẩn tài liệu',
     unpublishedSuccessfully: 'Đã hủy công bố thành công.',
+    unpublishIn: 'Hủy xuất bản trong {{locale}}',
     unpublishing: 'Đang ẩn tài liệu...',
     version: 'Phiên bản',
     versionAgo: '{{distance}} trước',
