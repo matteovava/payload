@@ -732,6 +732,10 @@ export type ImportMapGenerators = Array<
  */
 export type ExperimentalConfig = {
   localizeStatus?: boolean
+  /**
+   * When true, fallbackLocale accepts an array of locales in find queries and locale configuration.
+   */
+  multipleFallbackLocales?: boolean
 }
 
 export type AfterErrorHook = (

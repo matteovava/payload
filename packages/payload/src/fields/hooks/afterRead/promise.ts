@@ -1,6 +1,7 @@
 import type { RichTextAdapter } from '../../../admin/RichText.js'
 import type { SanitizedCollectionConfig } from '../../../collections/config/types.js'
 import type { SanitizedGlobalConfig } from '../../../globals/config/types.js'
+import type { ExperimentalConfig, RequestContext } from '../../../index.js'
 import type {
   JsonObject,
   PayloadRequest,
@@ -12,7 +13,6 @@ import type { Block, Field, TabAsField } from '../../config/types.js'
 import type { AfterReadArgs } from './index.js'
 
 import { MissingEditorProp } from '../../../errors/index.js'
-import { type RequestContext } from '../../../index.js'
 import { getBlockSelect } from '../../../utilities/getBlockSelect.js'
 import { stripUnselectedFields } from '../../../utilities/stripUnselectedFields.js'
 import { fieldAffectsData, fieldShouldBeLocalized, tabHasName } from '../../config/types.js'
@@ -33,6 +33,7 @@ type Args = {
   depth: number
   doc: JsonObject
   draft: boolean
+  experimental?: ExperimentalConfig
   fallbackLocale: null | string
   field: Field | TabAsField
   fieldIndex: number
@@ -79,6 +80,7 @@ export const promise = async ({
   depth,
   doc,
   draft,
+  experimental,
   fallbackLocale,
   field,
   fieldIndex,
@@ -160,8 +162,8 @@ export const promise = async ({
     if (fallbackLocale && fallbackLocale !== locale) {
       let fallbackValue
       const isNullOrUndefined = typeof value === 'undefined' || value === null
-
-      if (Array.isArray(fallbackLocale)) {
+      console.log(experimental?.multipleFallbackLocales)
+      if (experimental?.multipleFallbackLocales && Array.isArray(fallbackLocale)) {
         for (const locale of fallbackLocale) {
           const val = siblingDoc[field.name!]?.[locale]
 
