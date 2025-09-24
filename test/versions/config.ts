@@ -11,6 +11,7 @@ import CustomIDs from './collections/CustomIDs.js'
 import { Diff } from './collections/Diff/index.js'
 import DisablePublish from './collections/DisablePublish.js'
 import DraftPosts from './collections/Drafts.js'
+import DraftWithChangeHook from './collections/DraftsWithChangeHook.js'
 import DraftWithMax from './collections/DraftsWithMax.js'
 import DraftsWithValidate from './collections/DraftsWithValidate.js'
 import LocalizedPosts from './collections/Localized.js'
@@ -23,6 +24,7 @@ import AutosaveGlobal from './globals/Autosave.js'
 import AutosaveWithDraftButtonGlobal from './globals/AutosaveWithDraftButton.js'
 import DisablePublishGlobal from './globals/DisablePublish.js'
 import DraftGlobal from './globals/Draft.js'
+import DraftUnlimitedGlobal from './globals/DraftUnlimited.js'
 import DraftWithMaxGlobal from './globals/DraftWithMax.js'
 import LocalizedGlobal from './globals/LocalizedGlobal.js'
 import { MaxVersions } from './globals/MaxVersions.js'
@@ -45,6 +47,7 @@ export default buildConfigWithDefaults({
     AutosaveWithDraftValidate,
     DraftPosts,
     DraftWithMax,
+    DraftWithChangeHook,
     DraftsWithValidate,
     LocalizedPosts,
     VersionPosts,
@@ -62,6 +65,7 @@ export default buildConfigWithDefaults({
     DisablePublishGlobal,
     LocalizedGlobal,
     MaxVersions,
+    DraftUnlimitedGlobal,
   ],
   indexSortableFields: true,
   localization: {
